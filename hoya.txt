@@ -1,0 +1,443 @@
+
+tage 2 - kamleshop4707
+7st_soulsgod soulgod 
+
+
+
+
+
+
+
+MTIxNjYzMjM4MDgxNTU3MzAzNQ.GVltQ1.q8TdaRipgWMTF99kx7gadbmPvmCDvXThO-vKps      --- auth koi chutiya
+
+
+
+
+
+
+
+
+1-import 
+
+
+
+requests
+import time
+import datetime
+
+inp_time_1scrim = int()
+inp_time_2scrim = int()
+inp_time_3scrim = int()
+inp_time_4scrim = int()
+
+inp_time_end = int
+
+
+
+def welcome_screen():
+    print('HELLO THERE, WELCOME TO OUR REGISTRATION SOFTWARE \n \n \n \n \n')
+    print('1. : UPDATE REGISTRATION URL')
+    print('2. : REGISTRATION DETAILS')
+    print('3. : QUIT')
+    print('\n \n ')
+    Choice = int(input('ENTER YOUR CHOICE : '))
+    if Choice == 1:
+        None
+    elif Choice ==2:
+        registration_data()
+    elif Choice ==3:
+        quit()
+
+lis = []
+
+with open('url.txt','r') as sno:
+    for line in sno:
+        lis.append(line.strip())
+
+
+def registration_data():
+
+    inp_time_Hour1 = input('Enter Hour 1st scrim : ')
+    inp_time_minute1 = input('Enter Minute 1st scrim :')
+    inp_time_second1 = int(input('Enter Second 1st scrim :'))
+    
+    inp_time_Hour2 = input('Enter Hour 2nd scrim: ')
+    inp_time_minute2 = input('Enter Minute 2nd scrim :')
+    inp_time_second2 = int(input('Enter Second 2nd scrim :'))
+    
+    inp_time_Hour3 = input('Enter Hour 3rd scrim : ')
+    inp_time_minute3 = input('Enter Minute 3rd scrim  :')
+    inp_time_second3 = int(input('Enter Second 3rd scrim :'))
+    
+    inp_time_Hour4 = input('Enter Hour 4th scrim: ')
+    inp_time_minute4 = input('Enter Minute 4th scrim :')
+    inp_time_second4 = int(input('Enter Second 4th scrim:'))
+    
+    
+    inp_time_Hour_end = input('Enter Hour end : ')
+    inp_time_minute_end = input('Enter Minute end :')
+    inp_time_second_end = int(input('Enter Second end:'))
+
+
+    inp_time_1scrim = f'{inp_time_Hour1}:{inp_time_minute1}:{inp_time_second1}'
+    inp_time_2scrim = f'{inp_time_Hour2}:{inp_time_minute2}:{inp_time_second2}'
+    inp_time_3scrim = f'{inp_time_Hour3}:{inp_time_minute3}:{inp_time_second3}'
+    inp_time_4scrim = f'{inp_time_Hour4}:{inp_time_minute4}:{inp_time_second4}'
+    
+    inp_time_end = f'{inp_time_Hour_end}:{inp_time_minute_end}:{inp_time_second_end}'
+
+    yOrNo = input('DO YOU WANT TO START REGISTRATION (Y/N) : ')
+    if yOrNo == 'Y':
+        while True:
+            # Clear the console
+            print("\033c", end="")
+        
+            # Get the current time
+            current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        
+            time.sleep(0.5)
+            if current_time == inp_time_1scrim :
+                print('registration done')
+                register(lis[0])
+            if current_time ==inp_time_2scrim:
+                print(register)
+                register(lis[1])
+            if current_time ==inp_time_3scrim:
+                print(register)
+                register(lis[2])
+            if current_time ==inp_time_4scrim:
+                print(register)
+                register(lis[3])
+            if current_time == inp_time_end:
+                register(1214598349701914678)
+                break
+            else:
+                print('.........')
+    if yOrNo == "N":
+        welcome_screen()
+
+
+
+
+# sno =1214598349701914678
+
+
+
+def register(sno):
+
+    url = f"https://discord.com/api/v9/channels/{sno}/messages"
+    
+    headers = {
+        "Authorization": "MTExNzgzMzkxODY5NjEyODUxMg.Gi6crK.4CV4hQRcU7l7eQ2BEBJWA-2V8fPVJznDxECVX0",
+        "Content-Type": "application/json"
+    }
+    
+    msg = {
+        'content': 'Team Name - team   <@798833256958918676>  , <@611122880952008704> , <@1216632380815573035> , <@1117833918696128512> '
+    }
+    
+    response = requests.post(url, headers=headers, json=msg)
+    
+    print(response.status_code)
+    print(response.json())
+    a = str(response.status_code )
+    with open('process.txt','a') as file:
+        file.write(a)
+        file.write('\n')
+    b = str(response.json())
+    with open('json_Pro.txt','a') as jsn:
+        jsn.write(b)
+        jsn.write('\n')
+        
+
+
+welcome_screen()
+
+
+# inp_time_1scrim = f'{inp_time_Hour1}:{inp_time_minute1}:{inp_time_second1}'
+# inp_time_2scrim = f'{inp_time_Hour2}:{inp_time_minute2}:{inp_time_second2}'
+# inp_time_3scrim = f'{inp_time_Hour3}:{inp_time_minute3}:{inp_time_second3}'
+# inp_time_4scrim = f'{inp_time_Hour4}:{inp_time_minute4}:{inp_time_second4}'
+
+# inp_time_end = f'{inp_time_Hour_end}:{inp_time_minute_end}:{inp_time_second_end}'
+    
+# print(inp_time_1scrim)
+
+# while True:
+#     # Clear the console
+#     print("\033c", end="")
+
+#     # Get the current time
+#     current_time = datetime.datetime.now().strftime("%H:%M:%S")
+
+#     time.sleep(1)
+#     if current_time == inp_time_1scrim :
+#         print('registration done')
+#         register(lis[0])
+#     if current_time ==inp_time_2scrim:
+#         print(register)
+#         register(lis[1])
+#     if current_time ==inp_time_3scrim:
+#         print(register)
+#         register(lis[2])
+#     if current_time ==inp_time_4scrim:
+#         print(register)
+#         register(lis[3])
+#     if current_time == inp_time_end:
+#         register(1214598349701914678)
+#         break
+#     else:
+#         print('.........')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+code 2 
+
+
+
+import requests
+import time
+import datetime
+import ast
+Reg_Url_Time_dIct = {}
+
+with open("NEW_URL.txt", 'r') as dicti:
+    data = dicti.read().strip()
+    data = data.replace("\n", " ").strip(",")
+    try:
+        dict_data = ast.literal_eval("{" + data + "}")
+        Reg_Url_Time_dIct.update(dict_data)
+    except Exception as problem:
+        print('Unabel to read data ')
+
+inp_time_1scrim = int()
+inp_time_2scrim = int()
+inp_time_3scrim = int()
+inp_time_4scrim = int()
+
+inp_time_end = int()
+
+
+def LinkUpdate():
+    inp_Url = input('ENTER THE URL ')
+    inp_time_url = input(f'ENTER THE TIME OF REGISTRATION OF URL {inp_Url} (IN HOUR:MINUTE:SECOND) : ')
+    print('\n')
+    print(f'Make sure to match the url, Your entered URL is {inp_Url}')
+    dec = input('Do you want to update the url (Y/N) : ')
+    if dec == 'Y':
+        with open('NEW_URL.txt', 'a') as link:
+            link.write(f'"{inp_time_url}" : "{inp_Url}",\n')
+    
+    with open("NEW_URL.txt", 'r') as dicti:
+        data = dicti.read().strip()
+        data = data.replace("\n", " ").strip(",")
+        try:
+            dict_data = ast.literal_eval("{" + data + "}")
+            Reg_Url_Time_dIct.update(dict_data)
+        except Exception as problem:
+            print(f'Error to update URL {inp_Url}: {problem}')
+
+    print(Reg_Url_Time_dIct.keys())
+
+    if dec == 'N':
+        print('Returning to enter screen :)')
+        time.sleep(4)
+        LinkUpdate()
+    print('LINK UPDATED WAIT YOU ARE REDIRECTED TO MAIN SCREEN :)')
+    time.sleep(3)
+    welcome_screen()
+
+
+
+def welcome_screen():
+    print('HELLO THERE, WELCOME TO OUR REGISTRATION SOFTWARE \n \n \n \n \n')
+    print('1. : UPDATE REGISTRATION URL')
+    print('2. : REGISTRATION DETAILS')
+    print('3. : QUIT')
+    print('\n \n ')
+    Choice = int(input('ENTER YOUR CHOICE : '))
+    if Choice == 1:
+        LinkUpdate()
+    elif Choice ==2:
+        registration_data()
+    elif Choice ==3:
+        quit()
+
+lis = []
+
+with open('url.txt','r') as sno:
+    for line in sno:
+        lis.append(line.strip())
+
+
+def registration_data():
+
+    print('AVAILABLE SCRIMS TO REGISTER ARE AS FOLLOW : \n')
+
+    stored_data = list(Reg_Url_Time_dIct.keys())
+
+    n=0
+    for data in  stored_data:
+        print(f'{n+1} --> {stored_data[n]}')
+        n+=1
+
+    
+
+    while True:
+        scrim = (input("ENTER SCRIMS NO YOU WANT TO REGISTER WITHOUT ANY SPACE EX(1234), IF YOU ARE DONE SELECTING SCRIMS TYPE DONE TO START REGISTRATION "))
+        scrims = list(scrim)
+        n =0
+        for no in scrims:
+            scrim_no = int(scrims[n])
+            print(stored_data[scrim_no -1 ])
+            scrim_to_register = stored_data[scrim_no -1]
+            # register(Reg_Url_Time_dIct[f'{scrim_to_register}'])
+            reg_URL = Reg_Url_Time_dIct[f'{scrim_to_register}']
+            time_match(scrim_to_register,reg_URL)
+            n+=1
+
+def time_match(time_registration,scrim_url):
+    while True:
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        time.sleep(1)
+        if current_time == time_registration:
+            register(scrim_url)
+        print(time_registration)
+        if current_time> time_registration:
+            print('returning')
+            return
+
+        
+
+
+
+    
+    inp_time_Hour1 = input('Enter Hour 1st scrim : ')
+    inp_time_minute1 = input('Enter Minute 1st scrim :')
+    inp_time_second1 = int(input('Enter Second 1st scrim :'))
+    
+    inp_time_Hour2 = input('Enter Hour 2nd scrim: ')
+    inp_time_minute2 = input('Enter Minute 2nd scrim :')
+    inp_time_second2 = int(input('Enter Second 2nd scrim :'))
+    
+    inp_time_Hour3 = input('Enter Hour 3rd scrim : ')
+    inp_time_minute3 = input('Enter Minute 3rd scrim  :')
+    inp_time_second3 = int(input('Enter Second 3rd scrim :'))
+    
+    inp_time_Hour4 = input('Enter Hour 4th scrim: ')
+    inp_time_minute4 = input('Enter Minute 4th scrim :')
+    inp_time_second4 = int(input('Enter Second 4th scrim:'))
+    
+    
+    inp_time_Hour_end = input('Enter Hour end : ')
+    inp_time_minute_end = input('Enter Minute end :')
+    inp_time_second_end = int(input('Enter Second end:'))
+
+
+    inp_time_1scrim = f'{inp_time_Hour1}:{inp_time_minute1}:{inp_time_second1}'
+    inp_time_2scrim = f'{inp_time_Hour2}:{inp_time_minute2}:{inp_time_second2}'
+    inp_time_3scrim = f'{inp_time_Hour3}:{inp_time_minute3}:{inp_time_second3}'
+    inp_time_4scrim = f'{inp_time_Hour4}:{inp_time_minute4}:{inp_time_second4}'
+    
+    inp_time_end = f'{inp_time_Hour_end}:{inp_time_minute_end}:{inp_time_second_end}'
+
+    yOrNo = input('DO YOU WANT TO START REGISTRATION (Y/N) : ')
+    if yOrNo == 'Y':
+        while True:
+            # Clear the console
+            print("\033c", end="")
+        
+            # Get the current time
+            current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        
+            time.sleep(0.5)
+            if current_time == inp_time_1scrim :
+                print('registration done')
+                register(lis[0])
+            if current_time ==inp_time_2scrim:
+                print(register)
+                register(lis[1])
+            if current_time ==inp_time_3scrim:
+                print(register)
+                register(lis[2])
+            if current_time ==inp_time_4scrim:
+                print(register)
+                register(lis[3])
+            if current_time == inp_time_end:
+                register(1214598349701914678)
+                break
+            else:
+                print('.........')
+    if yOrNo == "N":
+        welcome_screen()
+
+
+
+
+# sno =1214598349701914678
+
+
+
+def register(sno):
+
+    url = f"https://discord.com/api/v9/channels/{sno}/messages"
+    
+    headers = {
+        "Authorization": "MTExNzgzMzkxODY5NjEyODUxMg.Gi6crK.4CV4hQRcU7l7eQ2BEBJWA-2V8fPVJznDxECVX0",
+        "Content-Type": "application/json"
+    }
+    
+    msg = {
+        'content': 'Team Name - team   <@798833256958918676>  , <@611122880952008704> , <@1216632380815573035> , <@1117833918696128512> '
+    }
+    
+    response = requests.post(url, headers=headers, json=msg)
+    
+    print(response.status_code)
+    print(response.json())
+    a = str(response.status_code )
+    with open('process.txt','a') as file:
+        file.write(a)
+        file.write('\n')
+    b = str(response.json())
+    with open('json_Pro.txt','a') as jsn:
+        jsn.write(b)
+        jsn.write('\n')
+
+    # tes_in = input('y/n')
+    # if tes_in == 'y':
+    #     return
+    # if tes_in == 'n':
+    #     print('none')
+        
+
+
+welcome_screen()
+
+
+
+
+
